@@ -14,13 +14,8 @@ TEST(SimpleTest, basicTest) {
 
   while (1) {
     auto token = scanner.get_token();
-    tokens.push_back(token);
-
     if (token._atributo == END) break;
-
-#ifndef NDEBUG
-    std::cout << token << "\n";
-#endif
+    tokens.push_back(token);
   }
 
   std::vector<Token> expected = {Token("a", Categoria::IDENTIFICADOR),

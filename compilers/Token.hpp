@@ -19,9 +19,9 @@ class Token {
   }
 };
 
-#ifndef NDEBUG
+//Allows printing Tokens on the Google Test failing reports
 std::ostream& operator<<(std::ostream& os, Token token) {
-  std::cout << "<";
+  os << "<";
   switch (token._atributo) {
     case Categoria::IDENTIFICADOR:
       os << "Identificador";
@@ -36,7 +36,6 @@ std::ostream& operator<<(std::ostream& os, Token token) {
       os << "Assign";
       break;
   }
-  os << ", " << token._lexema << ")";
+  os << ", " << token._lexema << ">";
   return os;
 }
-#endif
