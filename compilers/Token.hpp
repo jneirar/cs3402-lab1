@@ -35,6 +35,12 @@ std::ostream& operator<<(std::ostream& os, Token token) {
     case Categoria::ASSIGN:
       os << "Assign";
       break;
+    case Categoria::ERROR:
+      os << "Error";
+      break;
+    default:
+      os << "Sin Categoria";
+      break;
   }
   os << ", " << token._lexema << ">";
   return os;
