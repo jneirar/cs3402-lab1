@@ -4,6 +4,7 @@ function(ConfigureTest CMAKE_TEST_NAME)
   ADD_TEST(NAME ${CMAKE_TEST_NAME} COMMAND ${CMAKE_TEST_NAME})
 endfunction()
 
+# https://cmake.org/cmake/help/latest/module/FindFLEX.html
 FIND_PACKAGE(FLEX REQUIRED)
 
 IF(FLEX_FOUND)
